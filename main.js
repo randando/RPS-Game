@@ -26,19 +26,7 @@ function pick(choice) {
     } else {
       status = 'tie';
     }
-  }    
+  }
+  document.getElementById("imageid").src="../template/save.png";
+  document.getElementById("displayText").innerHTML = status.toUpperCase();
 }
-
-// Work on logic later
-// function compare(user, cpu){
-//   if(user=='paper' && (cpu=='paper' || cpu=='rock')){
-//     cpu = false;
-//   }else if(user=='rock' && (cpu=='rock' || cpu=='scissors')){
-//     cpu = false;
-//   }else if(user=='scissors' && (cpu=='scissors' || cpu=='paper')){
-//     cpu = false;
-//   }else{
-//     user = false;
-//     cpu = true;
-//   }
-// }

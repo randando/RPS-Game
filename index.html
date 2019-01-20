@@ -20,7 +20,10 @@
       <button type="button" class="btn btn-warning" id="fade1">START</button>
     </div>
     <div id="play" style="display:none;">
-      <h1 id="testText">TEST YOUR SKILLS</h1>
+      <div class="cpuPlay">
+        <img src="" id="imageid" alt="">
+      </div>
+      <h1 id="displayText">TEST YOUR SKILLS</h1>
       <div class="board">
         <div class="card" id="paper">
           <img src="img/paper.png" alt="paper icon">
@@ -32,7 +35,7 @@
           <img src="img/scissors.jpg" alt="scissors icon">
         </div>
       </div>
-      <button type="button" class="btn btn-warning" id="fade2">BACK</button>
+      <button type="button" class="btn btn-warning" id="fade2" style="display: none;">BACK</button>
     </div>
   </div>
   <script>
@@ -48,10 +51,9 @@
     });
     $cards = $('.card');
     $cards.click(function() {
-      $('#testText').fadeTo(1000, 0);
+      // $cards.not(this).animate({"opacity":"0","display":"none"});
+      // $(this).animate({left:'0px'});
       pick(jQuery(this).attr("id"));
-      $cards.not(this).animate({"opacity":"0","display":"none"});
-      $(this).animate({left:'0px'});
     });
   </script>
 </body>
