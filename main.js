@@ -1,5 +1,13 @@
+var img;
 function pick(choice) {
   var computerChoice = Math.floor(Math.random() * 3);
+  if (computerChoice==0){
+    img = "img/paper.png";
+  }else if(computerChoice==1){
+    img = "img/rock1.0.png";
+  }else{
+    img = "img/scissors.jpg";
+  }
   // 0:paper | 1:rock | 2:scissors
   var status;
   if (choice == 'paper') {
@@ -27,6 +35,6 @@ function pick(choice) {
       status = 'tie';
     }
   }
-  document.getElementById("imageid").src="../template/save.png";
+  var image = document.getElementById("imageid").src=img;  
   document.getElementById("displayText").innerHTML = status.toUpperCase();
 }

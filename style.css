@@ -56,12 +56,13 @@ body {
 	top: 45%;
 	right: 0;
 	left: 0;
+  font-size: 63px;
 }
 .container{
   top: 0;
   position: relative;
   width: 85%;
-  height: 90%;
+  height: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -71,7 +72,7 @@ body {
 }
 
 #intro{
-  top: 50%;
+  top: 33%;
   position: relative;
 }
 
@@ -80,11 +81,30 @@ body {
     box-shadow: none!important;
 }
 
+.content{
+  height: inherit;
+  position: relative;
+  top: 11%;
+}
+
+#displayText{
+  position: absolute;
+  top: -5%;
+  font-style: italic;
+}
+
 .board{
   position: relative;
+  bottom: -19%;
   width: 50%;
   margin: 0 auto;
   height: 125px;
+}
+
+#cpuPlay img{
+  width: 85%;
+  top: 10%;
+  position: relative;
 }
 
 .card{
@@ -102,12 +122,15 @@ body {
 }
 
 #play{
-  position: relative;
-  top: 25%;
+  height: inherit;
 }
 
-.cpuPlay{
+#cpuPlay{
   height: 120px;
   width: 120px;
   margin: 0 auto;
+  position: relative;
+  top: 15%;
+  border-radius: 75px;
+  background: yellow;
 }
