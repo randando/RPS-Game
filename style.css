@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.container h1 {
+  font-family: 'Open Sans';
+  font-weight: bold;
+	top: 45%;
+	right: 0;
+	left: 0;
+  font-size: 63px;
+}
+.container{
+  top: 0;
+  position: relative;
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.container button{
+  position: relative;
+  margin-top: 10px;
+}
+
+#intro{
+  top: 33%;
+  position: relative;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+.content{
+  height: inherit;
+  position: relative;
+  top: 11%;
+}
+
+#displayText{
+  position: absolute;
+  top: -5%;
+  font-style: italic;
+}
+
+.board{
+  position: relative;
+  bottom: -19%;
+  width: 50%;
+  margin: 0 auto;
+  height: 125px;
+}
+
+#cpuPlay img{
+  width: 85%;
+  top: 10%;
+  position: relative;
+}
+
+.card{
+  display: inline-block;
+  transition: all .2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card img{
+  width: 60%;
+}
+
+#play{
+  height: inherit;
+}
+
+#cpuPlay{
+  height: 120px;
+  width: 120px;
+  margin: 0 auto;
+  position: relative;
+  top: 15%;
+  border-radius: 75px;
+  background: yellow;
+}
