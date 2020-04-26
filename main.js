@@ -1,40 +1,39 @@
-var img;
 function pick(choice) {
+  var img;
+  //Random CPU pick
   var computerChoice = Math.floor(Math.random() * 3);
   if (computerChoice==0){
-    img = "img/paper.png";
+    img = "paper.png";
   }else if(computerChoice==1){
-    img = "img/rock1.0.png";
+    img = "rock1.0.png";
   }else{
-    img = "img/scissors.jpg";
+    img = "scissors.jpg";
   }
   // 0:paper | 1:rock | 2:scissors
   var status;
-  if (choice == 'paper') {
-    if (computerChoice == 1) {
-      status = 'win';
-    } else if (computerChoice == 2) {
-      status = 'loss';
-    } else {
-      status = 'tie';
-    }
-  } else if (choice == 'rock') {
-    if (computerChoice == 2) {
-      status = 'win';
-    } else if (computerChoice == 0) {
-      status = 'loss';
-    } else {
-      status = 'tie';
-    }
-  } else {
-    if (computerChoice == 0) {
-      status = 'win';
-    } else if (computerChoice == 1) {
-      status = 'loss';
-    } else {
-      status = 'tie';
+  if(img.startsWith(choice)){
+    status = 'tie';
+  }else{
+    if (choice == 'paper') {
+      if (computerChoice == 1) {
+        status = 'win';
+      } else{
+        status = 'loss';
+      }
+    }else if (choice == 'rock') {
+      if (computerChoice == 2) {
+        status = 'win';
+      }else{
+        status = 'loss';
+      }
+    }else{
+      if (computerChoice == 0) {
+        status = 'win';
+      } else{
+        status = 'loss';
+      }
     }
   }
-  var image = document.getElementById("imageid").src=img;  
+  document.getElementById("imageid").src="img/"+img;
   document.getElementById("displayText").innerHTML = status.toUpperCase();
 }
