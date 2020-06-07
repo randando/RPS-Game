@@ -92,7 +92,7 @@ h1 {
 
 .board{
   position: relative;
-  bottom: -19%;
+  bottom: -12%;
   width: 50%;
   margin: 0 auto;
   height: 125px;
@@ -103,6 +103,7 @@ h1 {
   top: 10%;
   position: relative;
   z-index: -1;
+  opacity: 0.75
 }
 
 .card{
@@ -148,4 +149,18 @@ h1 {
 
 .score{
   font-size: 2.5em;
+}
+
+#result{
+  font-size: 2em;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.plName{
+  font-style: italic;
+}
+
+.black{
+  color: black;
 }
