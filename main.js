@@ -1,3 +1,7 @@
+var plrScore = 0;
+var cpuScore = 0;
+var pointsToWin = 2;
+
 function pick(choice) {
   var img;
   //Random CPU pick
@@ -5,35 +9,28 @@ function pick(choice) {
   if (computerChoice==0){
     img = "paper.png";
   }else if(computerChoice==1){
-    img = "rock1.0.png";
+    img = "rock.png";
   }else{
     img = "scissors.jpg";
   }
   // 0:paper | 1:rock | 2:scissors
   var status;
-  if(img.startsWith(choice)){
-    status = 'tie';
-  }else{
+  if(!img.startsWith(choice)){
     if (choice == 'paper') {
-      if (computerChoice == 1) {
-        status = 'win';
-      } else{
-        status = 'loss';
-      }
+      (computerChoice == 1) ? plrScore++ : cpuScore++;
     }else if (choice == 'rock') {
-      if (computerChoice == 2) {
-        status = 'win';
-      }else{
-        status = 'loss';
-      }
+      (computerChoice == 2) ? plrScore++ : cpuScore++;
     }else{
-      if (computerChoice == 0) {
-        status = 'win';
-      } else{
-        status = 'loss';
-      }
+      (computerChoice == 0) ? plrScore++ : cpuScore++;
     }
   }
   document.getElementById("imageid").src="img/"+img;
-  document.getElementById("displayText").innerHTML = status.toUpperCase();
+  document.getElementById("plrScore").innerHTML = plrScore;
+  document.getElementById("cpuScore").innerHTML = cpuScore;
+  //Check for victory/loss
+  if(plrScore == pointsToWin){
+    alert("Congratulations! You win the battle");
+  }else if(cpuScore == pointsToWin){
+    alert("You lost!");
+  }
 }

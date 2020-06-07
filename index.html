@@ -15,50 +15,40 @@
 
 <body>
   <div class="container">
-    <div id="intro">
-      <h1>ROCK | PAPER | SCISSORS</h1>
-      <button type="button" class="btn btn-warning" id="fade1">START</button>
-    </div>
-    <div id="play" style="display:none;">
       <div class="content">
         <div id="cpuPlay">
           <img src="" id="imageid" alt="">
         </div>
-        <h1 id="displayText"></h1>
         <div class="board">
           <div class="card" id="paper">
             <img src="img/paper.png" alt="paper icon">
           </div>
           <div class="card" id="rock">
-            <img src="img/rock1.0.png" alt="rock icon" style="width:90%;">
+            <img src="img/rock.png" alt="rock icon" style="width:90%;">
           </div>
           <div class="card" id="scissors">
             <img src="img/scissors.jpg" alt="scissors icon">
           </div>
+          <div class="row">
+            <div class="column">
+              <h1>Player</h1>
+              <p id="plrScore" class="score"></p>
+            </div>
+            <div class="column">
+              <h1>CPU</h1>
+              <p id="cpuScore" class="score"></p>
+            </div>
+          </div>
         </div>
-        <button type="button" class="btn btn-warning" id="fade2" style="display: none;">BACK</button>
       </div>
-    </div>
   </div>
   <script>
-    $('#fade1').click(function() {
-      $("#intro").fadeOut('slow', function() {
-        $('#play').fadeIn();
-      });
-    });
-    $('#fade2').click(function() {
-      $("#play").fadeOut('slow', function() {
-        $('#intro').fadeIn('slow');
-      });
-    });
     $cards = $('.card');
     $cards.click(function() {
       $('#imageid').hide();
       $('#displayText').css("visibility", "hidden");
       pick(jQuery(this).attr("id"));
       $('#imageid').delay('fast').fadeIn();
-      $('#displayText').css("visibility", "visible").hide();
-      $('#displayText').delay(500).fadeIn();
     });
   </script>
 </body>
