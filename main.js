@@ -1,6 +1,6 @@
 var plrScore = 0;
 var cpuScore = 0;
-var pointsToWin = 2;
+var pointsToWin = 5;
 var status = "";
 var result;
 
@@ -69,7 +69,14 @@ const countdown = (start) => {
       start--;
     }
   }, 1000);
-}
+}    
+
+// Generic callback for effect
+function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+};
 
 const win = () => {
   plrScore++;
